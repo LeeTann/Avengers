@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'; //3
+import { Route, NavLink } from 'react-router-dom'; //3
 
 import Home from './components/Home';
 import AvengersList from './components/AvengersList';
@@ -24,10 +24,10 @@ class App extends Component {
       <div className="App">
         <ul className="navbar">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink exact to="/" activeClassName="activeNavButton">Home</NavLink>
           </li>
           <li>
-            <Link to="/avengers">Avengers</Link>
+            <NavLink to="/avengers" activeClassName="activeNavButton">Avengers</NavLink>
           </li>
         </ul>
         <Route exact path="/" component={Home} />  
